@@ -3,6 +3,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="animal" class="com.sam.Animal" ></bean>
+    <bean id="animal" class="com.sam.Animal" scope="singleton"></bean>
+    <bean id="mammal" class="com.sam.Mammal" scope="prototype"></bean>
 
 </beans>
