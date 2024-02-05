@@ -3,7 +3,30 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="animal" class="com.sam.Animal" scope="singleton"></bean>
-    <bean id="mammal" class="com.sam.Mammal" scope="prototype"></bean>
+<!--    <bean id="animal" class="com.sam.Animal" scope="singleton" autowire="byName">   -->
+    <bean id="animal" class="com.sam.Animal" scope="singleton" autowire="byType">
+        <constructor-arg index="1" value="human"></constructor-arg>
+        <constructor-arg index="0" value="4"></constructor-arg>
+
+        <property name="age" value="21"></property>
+<!--        <property name="mammal1" ref = "mammal"></property>-->
+
+        <property name="creature">
+<!--            inner bean : only available inside this class-->
+            <bean class="com.sam.Bird"></bean>
+        </property>
+    </bean>
+
+<!--    <bean id="mammal" class="com.sam.Mammal" scope="prototype"></bean>-->
+
+<!--    singleton-->
+    <bean id="creature1" class="com.sam.Mammal" primary="true"></bean>
+
+<!--    singleton object created when xml is loaded-->
+<!--    <bean id="creature2" class="com.sam.Bird"></bean>-->
+
+<!--    lazy-init stops singleton object created when xml is loaded, create only when needed-->
+<!--    <bean id="creature2" class="com.sam.Bird" lazy-init="true"></bean>-->
+
 
 </beans>

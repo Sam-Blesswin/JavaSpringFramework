@@ -13,19 +13,23 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("Spring.xml");
 
         //gets the object
-        Animal animal1 = (Animal) context.getBean("animal");
-        animal1.age = 30;
+        //typecasting need
+//        Animal animal1 = (Animal) context.getBean("animal");
+
+        //no typecast
+        Animal animal1 = context.getBean("animal", Animal.class);
+        int age = animal1.getAge();
         animal1.Speak();
 
-        Animal animal2 = (Animal) context.getBean("animal");
-        animal2.Speak();
+//        Animal animal2 = (Animal) context.getBean("animal");
+//        animal2.Speak();
 
         //Objects are created and referenced for prototype scope
-        Mammal mammal1 = (Mammal) context.getBean("mammal");
-        mammal1.age = 30;
-        mammal1.Speak();
-
-        Mammal mammal2 = (Mammal) context.getBean("mammal");
-        mammal2.Speak();
+//        Mammal mammal1 = (Mammal) context.getBean("mammal");
+//        mammal1.age = 30;
+//        mammal1.Speak();
+//
+//        Mammal mammal2 = (Mammal) context.getBean("mammal");
+//        mammal2.Speak();
     }
 }
