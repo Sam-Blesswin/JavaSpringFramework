@@ -2,7 +2,7 @@ package com.sam;
 
 public class Animal {
     private int age;
-    private Mammal mammal1;
+//    private Mammal mammal1;
     private String alias;
     private int legs;
 
@@ -31,14 +31,14 @@ public class Animal {
         this.age = age;
     }
 
-    public Mammal getMammal1() {
-        return mammal1;
-    }
-
-    public void setMammal1(Mammal mammal1) {
-        System.out.println("mammal setter called");
-        this.mammal1 = mammal1;
-    }
+//    public Mammal getMammal1() {
+//        return mammal1;
+//    }
+//
+//    public void setMammal1(Mammal mammal1) {
+//        System.out.println("mammal setter called");
+//        this.mammal1 = mammal1;
+//    }
 
     public Animal(){
         System.out.println("Animal Object Created");
