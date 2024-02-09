@@ -1,15 +1,10 @@
 # Java - Spring6 - SpringBoot3
 
-# Spring Framework Overview
+# Spring And Spring Boot Overview
 
 For detailed information on the Spring Framework, visit the following Notion page:
 
-[Spring Notes](https://knotty-beechnut-e0d.notion.site/Spring-f46ca05adc494bba922761a196e2d39d)
+[Spring And Springboot Notes](https://knotty-beechnut-e0d.notion.site/Spring-and-Springboot-9301df59c0e54d7e8c9eb0f97e9fb0ea?pvs=4)
 
-# Spring Boot 
+Spring Boot Initializer: https://start.spring.io/
 
-### Initializer: https://start.spring.io/
-
-For detailed information on the SpringBoot, visit the following Notion page:
-
-[SpringBoot Notes](https://knotty-beechnut-e0d.notion.site/SpringBoot-762101c97a5b4d7e88a79e3be7d799ac?pvs=4)
