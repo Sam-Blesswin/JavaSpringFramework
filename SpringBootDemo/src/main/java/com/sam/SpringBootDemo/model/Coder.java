@@ -1,4 +1,4 @@
-package com.sam.SpringBootDemo;
+package com.sam.SpringBootDemo.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
