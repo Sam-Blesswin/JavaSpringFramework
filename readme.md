@@ -6,7 +6,9 @@ For detailed information on the Spring Framework, visit the following Notion pag
 
 [Spring Notes](https://knotty-beechnut-e0d.notion.site/Spring-f46ca05adc494bba922761a196e2d39d)
 
-# Spring Boot Initializer : https://start.spring.io/
+# Spring Boot 
+
+### Initializer: https://start.spring.io/
 
 For detailed information on the SpringBoot, visit the following Notion page:
 
