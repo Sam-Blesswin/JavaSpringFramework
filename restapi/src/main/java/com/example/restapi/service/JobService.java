@@ -1,0 +1,22 @@
+package com.example.restapi.service;
+
+import com.example.restapi.model.JobPost;
+import com.example.restapi.repo.JobRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+public class JobService {
+    @Autowired
+    private JobRepo repo;
+    public List<JobPost> getAllJobs(){
+        return repo.getAllJobs();
+    }
+
+    public JobPost getJobPost(int id){
+       return repo.getJobPost(id);
+    }
+}
