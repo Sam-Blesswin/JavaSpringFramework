@@ -3,10 +3,8 @@ package com.sam.springbootWeb;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import static org.apache.coyote.http11.Constants.a;
 
@@ -36,11 +34,30 @@ public class HomeController {
 //        return "result.jsp";
 //    }
 
-    @RequestMapping("/add")
-    //num1 and num2 are variable name from the url
-    public String add(@RequestParam("num1") int a,@RequestParam("num2") int b, HttpSession session){
 
-        session.setAttribute("result",a + b);
+//    @RequestMapping("/add")
+//    //num1 and num2 are variable name from the url
+//    public String add(@RequestParam("num1") int a,@RequestParam("num2") int b, Model model){
+//        model.addAttribute("result",a + b);
+//
+//        return "result.jsp";
+//    }
+
+//    @RequestMapping("/add")
+//    public String add(@ModelAttribute Calculator calc, Model model){
+//
+//        model.addAttribute("result",calc.sum());
+//
+//        return "result.jsp";
+//    }
+
+
+    @RequestMapping("/add")
+
+    //@ModelAttribute is optional
+    public String add(Calculator calc, Model model){
+
+        model.addAttribute("result",calc.sum());
 
         return "result.jsp";
     }
